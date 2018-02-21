@@ -1,0 +1,10 @@
+---
+- debug:
+    var: counter|int
+
+- set_fact:
+    counter: "{{ counter|int + 1 }}"
+
+- include_role:
+    name: recursion
+  when: counter|int <= 195

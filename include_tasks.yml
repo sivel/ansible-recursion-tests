@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  gather_facts: false
+  vars:
+    counter: 0
+  tasks:
+    - include_tasks: ./include_me.yml

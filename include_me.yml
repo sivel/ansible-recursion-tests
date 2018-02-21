@@ -1,0 +1,9 @@
+---
+- debug:
+    var: counter|int
+
+- set_fact:
+    counter: "{{ counter|int + 1 }}"
+
+- include_tasks: ./include_me.yml
+  when: counter|int <= 195
